@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Nexus - Jogo do Número Secreto"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Entre Bugs e Solucoes | Número Secreto</title>
+</head>
+
+<body>
+
+    <main class="game">
+
+        <section class="game__content">
+
+            <header class="game__header">
+                <span class="game__badge">Entre Bugs e Solucoes</span>
+
+                <h1 class="game__title">
+                    Descubra o
+                    <span class="game__title-highlight">
+                        número secreto
+                    </span>
+                </h1>
+
+                <p class="game__description">
+                    Um número foi escolhido entre 1 e 10.
+                    Você consegue descobrir qual é?
+                </p>
+            </header>
+
+
+            <section class="game__challenge">
+
+                <div class="game__status">
+                    <span class="game__status-label">
+                        STATUS
+                    </span>
+
+                    <span
+                        id="mensagem-status"
+                        class="game__status-value"
+                    >
+                        AGUARDANDO PALPITE
+                    </span>
+                </div>
+
+
+                <div class="game__input-group">
+
+                    <label
+                        for="palpite"
+                        class="game__label"
+                    >
+                        Digite seu palpite
+                    </label>
+
+                    <input
+                        type="number"
+                        id="palpite"
+                        class="game__input"
+                        min="1"
+                        max="10"
+                        placeholder="?"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="game__actions">
+
+                    <button
+                        type="button"
+                        id="btn-chutar"
+                        class="game__button game__button--primary"
+                    >
+                        Chutar
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btn-novo-jogo"
+                        class="game__button game__button--secondary"
+                        disabled
+                    >
+                        Novo jogo
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section class="game__info">
+
+                <div class="info-card">
+                    <span class="info-card__label">
+                        TENTATIVAS
+                    </span>
+
+                    <strong
+                        id="tentativas"
+                        class="info-card__value"
+                    >
+                        0
+                    </strong>
+                </div>
+
+
+                <div class="info-card">
+                    <span class="info-card__label">
+                        INTERVALO
+                    </span>
+
+                    <strong class="info-card__value">
+                        1 — 10
+                    </strong>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <aside class="game__visual">
+
+            <div class="game__visual-glow"></div>
+
+            <img
+                src="img/robo.png"
+                alt="Robô futurista do jogo Nexus"
+                class="game__robot"
+            >
+
+            <div class="game__visual-message">
+                <span>BOA SORTE</span>
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <footer class="game__footer">
+        <span>NEXUS GAME</span>
+        <span>•</span>
+        <span>NUMBER CHALLENGE</span>
+    </footer>
+
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>
